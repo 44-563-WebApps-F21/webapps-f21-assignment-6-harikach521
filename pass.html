@@ -10,7 +10,7 @@
     <h1>Pass phraseby Harika Chintala</h1>
     <form>
         <label for="form1_secretphrase">Enter the secret phrase </label>
-        <input type ="password" id="form1_secretphrase" name="secretphrase" min=10 max=50  value=30> <br>
+        <input type ="password" id="form1_secretphrase" name="secretphrase" value="Let me in"min=10 max=50  value=30> <br>
     
         <label for="form1_phrasecheck">Enter a phrase</label>
         <input type ="text" id="form1_phrasecheck" name="phrasecheck" autofocus> <br>
@@ -34,13 +34,14 @@
         if(secretphrase == phrasecheck){
             correct=correct+1;
             alert("Access allowed!!");
-            out.innerHTML = "Correct count : "+correct;
+            out.innerHTML="Correct count : "+correct;
         }
         else{
             wrong=wrong+1;
             alert("Access denied!!");
-            out.innerHTML = "Wrong count : "+wrong;
+            out.innerHTML=" Wrong count : "+wrong;
         }
+       
     }
     </script>
 </body>
