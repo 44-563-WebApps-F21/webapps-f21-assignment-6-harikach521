@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Page</title>
+</head>
+<body>
+    <h1>Pass phraseby Harika Chintala</h1>
+    <form>
+        <label for="form1_secretphrase">Enter the secret phrase </label>
+        <input type ="password" id="form1_secretphrase" name="secretphrase" min=10 max=50  value=30> <br>
+    
+        <label for="form1_phrasecheck">Enter a phrase</label>
+        <input type ="text" id="form1_phrasecheck" name="phrasecheck" autofocus> <br>
+    
+        <input type="button" onclick="processPhrase()" value="Check the phrase">
+    </form>
+    
+    
+    <p id="result"> </p>
+    
+    <script> 
+    var correct=0
+    var wrong=0
+    function processPhrase(){
+        console.log("Getting form values")
+        secretphrase = document.getElementById("form1_secretphrase").value
+        phrasecheck = document.getElementById("form1_phrasecheck").value
+        //confirmed = confirm("Are these the values? "+secretphrase+" and "+phrasecheck)
+       
+        out = document.getElementById("result")
+        if(secretphrase == phrasecheck){
+            correct=correct+1;
+            alert("Access allowed!!");
+            out.innerHTML = "Correct count : "+correct;
+        }
+        else{
+            wrong=wrong+1;
+            alert("Access denied!!");
+            out.innerHTML = "Wrong count : "+wrong;
+        }
+    }
+    </script>
+</body>
+</html>
