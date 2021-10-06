@@ -43,6 +43,36 @@
         }
        
     }
-    </script>
+    </script>    
+    
+    <div class="container">
+        <img id ="tigerImage" src="tiger.png" onclick="newImage()" height="200" weight="200">
+        
+        <script>
+
+            var usingImage=1;
+            function newImage(){
+
+                switch(usingImage){
+                    case 1:                        
+                        var x=document.getElementById("tigerImage").src="tiger.png";                        
+                        usingImage++;
+                        break;
+
+                    case 2:
+                        var y=document.getElementById("tigerImage").src="cat2.jpg";
+                        usingImage++;
+                        break;
+
+                    case 3:
+                        var z=document.getElementById("tigerImage").src="horse.jpg";                        
+                        usingImage=1;
+                        break;
+                }
+
+        }
+        </script>
+        
+    </div>
 </body>
 </html>
