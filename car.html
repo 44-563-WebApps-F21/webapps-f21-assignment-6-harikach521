@@ -43,5 +43,25 @@ function OrderCar(){
 }
 </script>
 
+<!-- Part 8: -->
+<form>
+    <label for="tx_property">Enter a property </label>
+    <input type ="text" id="tx_property" name="tx_property" value="color"> <br>
+
+    <label for="tx_valProperty">Enter a value </label>
+    <input type ="text" id="tx_valProperty" name="tx_valProperty" autofocus> <br>
+
+    <input type="button" onclick="updateCar()" value="Update the car">
+</form>
+<p id="result2">Results </p>
+<script>
+    
+    function updateCar(){
+        my_car.prop= document.getElementById("tx_property").value;
+        my_car.valOfProp= document.getElementById("tx_valProperty").value;
+        console.log(my_car)
+        document.getElementById("result2").innerHTML = Object.values(my_car);
+    }
+</script>
 </body>
 </html> 
