@@ -13,7 +13,8 @@
     <title>Pass Page</title>
 </head>
 <body>
-    <h1>Pass phraseby Harika Chintala</h1>
+    <h1 align="middle" style="color:rgb(0, 60, 255)">Pass phraseby Harika Chintala</h1>
+    <div class="container text-center">
     <form>
         <label for="form1_secretphrase">Enter the secret phrase </label>
         <input type ="password" id="form1_secretphrase" name="secretphrase" value="Let me in"min=10 max=50  value=30> <br>
@@ -21,16 +22,16 @@
         <label for="form1_phrasecheck">Enter a phrase</label>
         <input type ="text" id="form1_phrasecheck" name="phrasecheck" autofocus> <br>
     
-        <input type="button" onclick="processPhrase()" value="Check the phrase">
+        <input class="btn btn-info" type="button" onclick="processPhrase()" value="Check the phrase">
     </form>
+</div>
     
-    
-    <p id="result"> </p>
+    <p id="result" align ="middle"> </p>
     
     <script> 
     var correct=0
     var wrong=0
-    var c=0
+    c=0
     function processPhrase(){
         console.log("Getting form values")
         secretphrase = document.getElementById("form1_secretphrase").value
@@ -61,7 +62,7 @@
     </script>    
 
     <!--part 4: -->
-    <div class="container">
+    <div class="container" align ="middle">
         <img id ="tigerImage" src="tiger.png" onclick="newImage()" height="200" weight="200">
         
         <script>
@@ -84,6 +85,7 @@
                         var z=document.getElementById("tigerImage").src="horse.jpg";                        
                         usingImage=1;
                         break;
+                    default :usingImage=1;
                 }
 
         }

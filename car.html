@@ -11,9 +11,10 @@
     </head>
 <body>
 
-<h1>Harika Chintala orders a car</h1>
+<h1 align="middle" style="color:rgb(0, 60, 255)">Harika Chintala orders a car</h1>
 
 <!-- Part 7: -->
+<div class="container text-center">
 <form>
     <label for="ch_electric">Electric </label>
     <input type ="checkbox" id="ch_electric" name="ch_electric"> <br>
@@ -24,11 +25,12 @@
     <label for="ch_gps">GPS</label>
     <input type ="checkbox" id="ch_gps" name="ch_gps" autofocus> <br>
 
-    <input type="button" onclick="OrderCar()" value="Order a car">
+    <input class="btn btn-info" type="button" onclick="OrderCar()" value="Order a car">
 </form>
 
 
 <p id="result">Results of car </p>
+</div>
 
 <script> 
 var my_car={}
@@ -52,16 +54,18 @@ function OrderCar(){
 </script>
 
 <!-- Part 8: -->
+<div class="container text-center">
 <form>
     <label for="tx_property">Enter a property </label>
     <input type ="text" id="tx_property" name="tx_property" value="color"> <br>
 
     <label for="tx_valProperty">Enter a value </label>
     <input type ="text" id="tx_valProperty" name="tx_valProperty" autofocus> <br>
-
-    <input type="button" onclick="updateCar()" value="Update the car">
+    <br>
+    <input class="btn btn-info" type="button" onclick="updateCar()" value="Update the car">
 </form>
-<p id="result2">Results </p>
+<p id="result2" align ="middle">Results </p>
+</div>
 <script>
     
     function updateCar(){

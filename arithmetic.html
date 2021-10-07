@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <title>Arithmetic Page</title>
+    
      <head>
+        <title>Arithmetic Page</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
@@ -11,20 +12,22 @@
      </head>
 <body>
 
-    <h1>Harika Chintala Computes</h1>
+    <h1 align="middle" style="color:rgb(0, 60, 255)">Harika Chintala Computes</h1>
 
 <!--part 5: -->
+<div class="container text-center">
 <form>
-    <label for="form1_base"> Enter a base </label>
-    <input type ="number" id="form1_baseElement" name="form1_base" min=10 max=50 step=2 value=30> <br>
+    <label for="form1_base"> Enter a base </label><br>
+    <input type ="number" id="form1_baseElement" name="form1_base" min=10 max=50 step=2 value=10> <br>
+    <br>
+    <label for="form1_expo"> Enter an Exponent </label><br>
+    <input type ="number" id="form1_exponentElement" name="form1_expo" min=2 value=2> <br>
 
-    <label for="form1_expo"> Enter an Exponent </label>
-    <input type ="number" id="form1_exponentElement" name="form1_expo" min=2 autofocus> <br>
-
-    <input type="button" onclick="powers()" value="Compute">
+    <input class="btn btn-info" type="button" onclick="powers()" value="Compute"><br>
 </form>
 
-<p id="result1"> Here is the Result </p>
+<p id="result1" align ="middle"> Here is the Result </p>
+</div>
 
 <script> 
 
@@ -42,21 +45,23 @@ function powers (){
 </script>
 
 <!--- Part 6:-->
+<div class="container text-center">
 <form>
-    <input type="radio" id="rg1_plus" value="plus" onclick="processRadio()" checked >
+    <input type="radio" id="rg1_plus" value="plus" name="cal"onclick="processRadio()" checked >
     <label for="rg1_plus">+</label></br>
   
-    <input type="radio" id="rg1_minus" value="minus" onclick="processRadio()">
+    <input type="radio" id="rg1_minus" value="minus" name="cal" onclick="processRadio()">
     <label for="rg1_minus">-</label></br>
   
-    <input type="radio" id="rg1_multiplication" value="times" onclick="processRadio()">
+    <input type="radio" id="rg1_multiplication" value="times" name="cal" onclick="processRadio()">
     <label for="rg1_multiplication">*</label></br>
 
-    <input type="radio" id="rg1_division" value="divide" onclick="processRadio()">
+    <input type="radio" id="rg1_division" value="divide" name="cal" onclick="processRadio()">
     <label for="rg1_division">/</label></br>
     
   </form>
   <p id=result2>Here are results</p>
+</div>
   <script>
       function processRadio(){
          
@@ -64,16 +69,16 @@ function powers (){
           expoElement = document.getElementById("form1_exponentElement").value
           out1= document.getElementById("result2")
           if(document.getElementById('rg1_plus').checked){
-              out1.innerHTML="result is: "+ (Number(baseElement)+Number(expoElement))
+              out1.innerHTML="Sum of "+ baseElement + " and " + expoElement + " is " + (Number(baseElement)+Number(expoElement))
           }
           if(document.getElementById('rg1_minus').checked){
-              out1.innerHTML="result is: "+ (Number(baseElement)-Number(expoElement))
+              out1.innerHTML="Difference of "+ baseElement + " and " + expoElement + " is " + (Number(baseElement)-Number(expoElement))
           }
           if(document.getElementById('rg1_multiplication').checked){
-              out1.innerHTML="result is: "+ (Number(baseElement)*Number(expoElement))
+              out1.innerHTML="Product of "+ baseElement + " and " + expoElement + " is " + (Number(baseElement)*Number(expoElement))
           }
           if(document.getElementById('rg1_division').checked){
-              out1.innerHTML="result is: "+ (Number(baseElement)/Number(expoElement))
+              out1.innerHTML="Division of "+ baseElement + " and " + expoElement + " is " + (Number(baseElement)/Number(expoElement))
           }
       }
   </script>
