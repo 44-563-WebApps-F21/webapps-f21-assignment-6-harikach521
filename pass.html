@@ -24,6 +24,7 @@
     <script> 
     var correct=0
     var wrong=0
+    var c=0
     function processPhrase(){
         console.log("Getting form values")
         secretphrase = document.getElementById("form1_secretphrase").value
@@ -33,17 +34,26 @@
         out = document.getElementById("result")
         if(secretphrase == phrasecheck){
             correct=correct+1;
+            c=0;
             alert("Access allowed!!");
             out.innerHTML="Correct count : "+correct;
         }
         else{
             wrong=wrong+1;
+            c=c+1;
             alert("Access denied!!");
             out.innerHTML=" Wrong count : "+wrong;
-        }
+            if(c>=3){
+                document.getElementById("button").onclick=accountlocked();
+            }
+        }        
        
     }
+    function accountlocked(){
+        alert("Account Locked")
+    }
     </script>    
+
     <!--part 4: -->
     <div class="container">
         <img id ="tigerImage" src="tiger.png" onclick="newImage()" height="200" weight="200">
